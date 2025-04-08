@@ -1,0 +1,19 @@
+* {
+    padding: 0.1em;
+    margin: 0.1em;
+}
+
+header {
+    border: 2px  solid lightgray;
+    text-align: center;
+}
+
+#logo {
+    width:10%;
+    height:10%;
+    align-self: flex-start;
+}
+
+h1 {
+    display: inline;
+}
