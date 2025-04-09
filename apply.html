@@ -1,103 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Form</title>
-</head>
-<body>
+    <title>Apply</title>
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+    <header> <!-- Logo / Company Name-->
+      <img id="logo" src="images/image.png" alt="Intelligenz logo">
+      <h1>Intelligenz Analytics</h1>
+    </header>
 
-<h1>Job Application Form</h1>
-<form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" novalidate>
+    <!--NAVIGATION MENU - WILL NEED TO BE UPDATED-->
+    <nav class="menu"> <!-- Menu / Navigation-->
+      <ul>
+        <li> <a href="index.html">Home</a></li>
+        <li> <a href="jobs.html">Jobs</a></li>
+        <li> <a href="apply.html">Apply</a></li>
+        <li> <a href="about.html">About</a></li>
+      </ul>
+      </nav>
 
-    <!-- Job Reference Number -->
-    <label for="job-ref">Job Reference Number:</label>
-    <select id="job-ref" name="job_ref" required>
-        <option value="" disabled selected>Select a job reference number</option>
-        <option value="1">Job Ref #001</option>
-        <option value="2">Job Ref #002</option>
-        <option value="3">Job Ref #003</option>
-    </select>
+    <!--Form-->
+    <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+      <fieldset>
+        <legend>Personal information</legend>
+        <p><label for="firstname">First Name</label>
+          <input type="text" name="firstname" id="firstname" pattern="[A-za-z]{1,20}" required>
+        </p>
 
-    <!-- First Name -->
-    <label for="first-name">First Name:</label>
-    <input type="text" id="first-name" name="first_name" maxlength="20" pattern="[A-Za-z]{1,20}" required
-           title="Only letters allowed, max length is 20.">
+        <p><label for="lastname">Last Name</label>
+          <input type="text" name="lastname" id="lastname" pattern="[A-za-z{1,20}]" required>
+        </p>
 
-    <!-- Last Name -->
-    <label for="last-name">Last Name:</label>
-    <input type="text" id="last-name" name="last_name" maxlength="20" pattern="[A-Za-z]{1,20}" required
-           title="Only letters allowed, max length is 20.">
+        <p><label for="dob">Date of Birth</label>
+          <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="\d{1,2}\/\d{1,2}\/\d{4}" required>
+        </p>
 
-    <!-- Date of Birth -->
-    <label for="dob">Date of Birth (dd/mm/yyyy):</label>
-    <input type="date" id="dob" name="dob" required>
+        <legend>Gender</legend>
+        <p><label for="male">Male</label>
+          <input type="radio" id="male" name="gender" value="male" required>
+        <label for="female">Female</label>
+          <input type="radio" id="female" name="gender" value="female">
+        <label for="other">Other</label>
+          <input type="radio" id="other" name="gender" value="other">
+        <label for="notgiven">Prefer not to answer</label>
+          <input type="radio" id="none" name="gender" value="none">
+        </p>
+      </fieldset>
 
-    <!-- Gender -->
-    <fieldset>
-        <legend>Gender:</legend>
-        <label for="male">
-            <input type="radio" id="male" name="gender" value="Male" required> Male
-        </label>
-        <label for="female">
-            <input type="radio" id="female" name="gender" value="Female"> Female
-        </label>
-        <label for="other">
-            <input type="radio" id="other" name="gender" value="Other"> Other
-        </label>
-    </fieldset>
+      <fieldset>
+        <legend>Contact information</legend>
+        <p><label for="address">Street Address</label>
+          <input type="text" id="address" name="address" pattern="{40}" required> <!--Check pattern-->
+        <p><label for="suburb">Suburb/Town</label>
+          <input type="text" id="suburb" name="suburb" pattern="{40}" required> <!--Check pattern-->
+        
+        
+        <p><label for="state">State</label>
+          <select name="state" id="state" required>
+            <option value="">Select</option>
+            <option value="vic">VIC</option>
+            <option value="nsw">NSW</option>
+            <option value="qld">QLD</option>
+            <option value="nt">NT</option>
+            <option value="wa">WA</option>
+            <option value="sa">SA</option>
+            <option value="tas">TAS</option>
+            <option value="act">ACT</option>
+          </select>
+        </p>
+        
+        
+        <p><label for="postcode">Postcode</label>
+          <input type="text" name="postcode" id="postcode" pattern="[0-9]{4}" required>
+        </p>
 
-    <!-- Street Address -->
-    <label for="address">Street Address:</label>
-    <input type="text" id="address" name="address" maxlength="40" required>
+        <p><label for="email">Email address</label>
+          <input type="text" required> <!--Check pattern--> <!--pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"-->
+        </p>
 
-    <!-- Suburb/Town -->
-    <label for="suburb">Suburb/Town:</label>
-    <input type="text" id="suburb" name="suburb" maxlength="40" required>
+        <p><label for="phone">Phone number</label>
+          <input type="text" id="phone" name="phone" pattern="[0-9]{8,12}" required> <!--OR SPACES-->
+        </p>
+      </fieldset>
 
-    <!-- State -->
-    <label for="state">State:</label>
-    <select id="state" name="state" required>
-        <option value="" disabled selected>Select your state</option>
-        <option value="VIC">VIC</option>
-        <option value="NSW">NSW</option>
-        <option value="QLD">QLD</option>
-        <option value="NT">NT</option>
-        <option value="WA">WA</option>
-        <option value="SA">SA</option>
-        <option value="TAS">TAS</option>
-        <option value="ACT">ACT</option>
-    </select>
+      <fieldset>
+        <legend>Job information</legend>
+        <p><label for="jobnumber">Job reference number</label> <!--JOB REFERENCE NUMBERS WILL BE 5 ALPHANUMERIC CHARACTERS-->
+          <select name="jobnumber" id="jobnumber" required>
+            <option value="">Select</option>
+            <option value="dataanalyst">DATA REFNUMBER</option>
+            <option value="servertechnician">SERVERTECH REFNUMBER</option>
+          </select>
+        </p>
 
-    <!-- Postcode -->
-    <label for="postcode">Postcode:</label>
-    <input type="text" id="postcode" name="postcode" pattern="\d{4}" required
-           title="Postcode must be exactly 4 digits.">
+        <legend>Technical experience</legend>
+        <p><label for="python">Python</label>
+          <input type="checkbox" id="python" name="experience[]" value="python" checked="checked">
+        <label for="sql">SQL</label>
+          <input type="checkbox" id="sql" name="experience[]" value="sql">
+        <label for="c">C/C++</label>
+          <input type="checkbox" id="c" name="experience[]" value="c">
+        <label for="powershell">PowerShell</label>
+          <input type="checkbox" id="powershell" name="experience[]" value="powershell">
+        </p>
 
-    <!-- Email Address -->
-    <label for="email">Email Address:</label>
-    <input type="email" id="email" name="email" required
-           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address.">
+        <p><label for="skils">Other skills<br></label>
+          <textarea id="skills" name="skills" rows="6" placeholder="Any other skills relevant to the job application"></textarea>
+        </p>
+      </fieldset>
 
-    <!-- Phone Number -->
-    <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone" pattern="\d{8,12}" required
-           title="Phone number must be between 8 to 12 digits.">
-
-    <!-- Technical Skills -->
-    <label>Technical Skills:</label>
-    <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
-    <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
-    <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
-    <label><input type="checkbox" name="skills" value="Python"> Python</label>
-
-    <!-- Other Skills -->
-    <label for="other-skills">Other Skills:</label>
-    <textarea id="other-skills" name="other_skills" rows="4" cols="50"></textarea>
-
-    <!-- Submit Button -->
-    <button type="submit">Apply</button>
-</form>
-
-</body>
+      <!--Form submit button-->
+      <p><input type="submit" value="Apply"></p>
+    </form>
+  </body>
 </html>
