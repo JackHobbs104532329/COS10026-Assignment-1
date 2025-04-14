@@ -79,13 +79,13 @@
         
         <!--Postcode, email, and Phone number text inputs-->
         <p><label for="postcode">Postcode</label>
-          <input type="text" name="postcode" id="postcode" pattern="[0-9]{4}" required>
+          <input type="text" name="postcode" id="postcode" pattern="[0-9]{1}[2-9]{1}[0-4]{1}[0-4]{1}" required>
         </p>
         <p><label for="email">Email address</label>
-          <input id="email" type="text" required> <!--Check pattern--> <!--pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"-->
+          <input id="email" type="email" name="email" required>
         </p>
         <p><label for="phone">Phone number</label>
-          <input type="text" id="phone" name="phone" pattern="[0-9]{8,12}" required> <!--OR SPACES-->
+          <input type="text" id="phone" name="phone" pattern="[0-9 ]{8,14}" required>
         </p>
       </fieldset>
 
