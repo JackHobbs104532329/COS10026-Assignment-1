@@ -187,11 +187,11 @@ td, dl dt {
 
 /* .class Styling */
 .menu h1 {
-    font-family: 'Lucida Sans' monospace;
+    font-family: 'Lucida Sans', Lucida, monospace;
 }
 .menu {
     background-color: ghostwhite;
-    font-family: 'Lucida Sans' monospace;
+    font-family: 'Lucida Sans', Lucida, monospace;
     border: 2px solid rgba(67,67,67);
 }
 .menu ul{
@@ -241,7 +241,7 @@ td, dl dt {
 .homepage_description p {
     font-size: 1.25em;
     display: flex;
-    align-items: left;
+    align-items: flex-start;
     flex-direction: row;
     align-self: baseline;
 }
