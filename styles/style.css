@@ -2,7 +2,7 @@
 filename: style.css
 author: David O'Connell
 created: 
-last modified: 13th April 2025
+last modified: 14th April 2025
 description: CSS styling for index.html, apply.html, about.html, & jobs.html
 */
 
@@ -121,11 +121,16 @@ fieldset legend {
 
 /* Grouping Styling */
 
-/* Contextual Styling */
+p input, select {
+    box-shadow: 0px 2px 4px gray;
+    border: 2px solid rgba(0,0,0,0.5);
+    border-radius: 6px;
+}
+
+
+/* Psuedo Classes */
 .menu ul li a:hover {
     color: black;
     border: 6px solid ghostwhite;
     background-color: ghostwhite;
 }
-
-/* Psuedo Classes */
