@@ -39,7 +39,7 @@
           <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="\d{1,2}\/\d{1,2}\/\d{4}" required>
         </p>
 
-        <h6>Gender</h6>
+        <p>Gender</p>
         <p><label for="male">Male</label>
           <input type="radio" id="male" name="gender" value="male" required>
         <label for="female">Female</label>
@@ -47,7 +47,7 @@
         <label for="other">Other</label>
           <input type="radio" id="other" name="gender" value="other">
         <label for="notgiven">Prefer not to answer</label>
-          <input type="radio" id="none" name="gender" value="none">
+          <input type="radio" id="notgiven" name="gender" value="none">
         </p>
       </fieldset>
 
@@ -79,7 +79,7 @@
         </p>
 
         <p><label for="email">Email address</label>
-          <input type="text" required> <!--Check pattern--> <!--pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"-->
+          <input id="email" type="text" required> <!--Check pattern--> <!--pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"-->
         </p>
 
         <p><label for="phone">Phone number</label>
@@ -97,7 +97,7 @@
           </select>
         </p>
 
-        <legend>Technical experience</legend>
+        <p>Technical experience</p>
         <p><label for="python">Python</label>
           <input type="checkbox" id="python" name="experience[]" value="python" checked="checked">
         <label for="sql">SQL</label>
@@ -108,8 +108,8 @@
           <input type="checkbox" id="powershell" name="experience[]" value="powershell">
         </p>
 
-        <p><label for="skils">Other skills<br></label>
-          <textarea id="skills" name="skills" rows="6" placeholder="Any other skills relevant to the job application"></textarea>
+        <p><label>Other skills<br></label>
+          <textarea name="skills" rows="6" placeholder="Any other skills relevant to the job application"></textarea>
         </p>
       </fieldset>
 
