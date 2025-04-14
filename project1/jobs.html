@@ -1,116 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Form</title>
+    <title>Available Jobs - Intelligenz Analytics</title>
     <link rel="stylesheet" href="../styles/style.css">
-</head>
-<body>
-    <header> <!-- Logo / Company Name-->
-        <img id="logo" src="../images/image.png" alt="Intelligenz logo">
-        <h1>Intelligenz Analytics - Jobs</h1>
-      </header>
-      <nav class="menu"> <!-- Menu / Navigation-->
+  </head>
+  <body>
+    <!-- Header with Company Logo and Name -->
+    <header> 
+      <img id="logo" src="../images/image.png" alt="Intelligenz logo">
+      <h1>Intelligenz Analytics - Available Jobs</h1>
+    </header>
+
+    <!-- Menu / Navigation -->
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="apply.html">Apply</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="mailto:intelligenzanalytics@gmail.com">Email</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main>
+      <section>
+        <h2>Data Analyst</h2>
+        <p><strong>Reference Number:</strong> DA123</p>
+        <p><strong>Position Title:</strong> Data Analyst</p>
+        <p><strong>Brief Description:</strong> Analyze and interpret data to provide actionable insights for the company.</p>
+        <p><strong>Salary Range:</strong> $60,000 - $80,000 annually</p>
+        <p><strong>Reports To:</strong> Senior Data Analyst</p>
+
+        <h3>Key Responsibilities</h3>
         <ul>
-          <li> <a href="index.html">Home</a></li>
-          <li> <a href="jobs.html">Jobs</a></li>
-          <li> <a href="apply.html">Apply</a></li>
-          <li> <a href="about.html">About</a></li>
-          <li> <a href="mailto:intelligenzanalytics@gmail.com">Email</a></li>
+          <li>Collect and analyze data from various sources</li>
+          <li>Prepare reports and presentations on findings</li>
+          <li>Collaborate with teams to solve business problems</li>
+          <li>Ensure data integrity and accuracy</li>
         </ul>
-        </nav>
 
-<form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" novalidate>
+        <h3>Required Qualifications and Skills</h3>
+        <p><strong>Essential:</strong></p>
+        <ul>
+          <li>Bachelor's degree in Data Science, Mathematics, or a related field</li>
+          <li>Experience with Python and SQL</li>
+          <li>3+ years of data analysis experience</li>
+        </ul>
+        <p><strong>Preferable:</strong></p>
+        <ul>
+          <li>Experience with machine learning tools</li>
+          <li>Knowledge of data visualization tools like Tableau or Power BI</li>
+        </ul>
+      </section>
 
-    <!-- Job Reference Number -->
-    <label for="job-ref">Job Reference Number:</label>
-    <select id="job-ref" name="job_ref" required>
-        <option value="" disabled selected>Select a job reference number</option>
-        <option value="1">Job Ref #001</option>
-        <option value="2">Job Ref #002</option>
-        <option value="3">Job Ref #003</option>
-    </select>
+      <section>
+        <h2>Server Technician</h2>
+        <p><strong>Reference Number:</strong> ST456</p>
+        <p><strong>Position Title:</strong> Server Technician</p>
+        <p><strong>Brief Description:</strong> Responsible for maintaining and troubleshooting the company's server infrastructure.</p>
+        <p><strong>Salary Range:</strong> $50,000 - $70,000 annually</p>
+        <p><strong>Reports To:</strong> IT Manager</p>
 
-    <!-- First Name -->
-    <label for="first-name">First Name:</label>
-    <input type="text" id="first-name" name="first_name" maxlength="20" pattern="[A-Za-z]{1,20}" required
-           title="Only letters allowed, max length is 20.">
+        <h3>Key Responsibilities</h3>
+        <ul>
+          <li>Maintain server hardware and software systems</li>
+          <li>Troubleshoot network issues and provide support</li>
+          <li>Perform routine system updates and patches</li>
+          <li>Ensure security and data protection protocols are followed</li>
+        </ul>
 
-    <!-- Last Name -->
-    <label for="last-name">Last Name:</label>
-    <input type="text" id="last-name" name="last_name" maxlength="20" pattern="[A-Za-z]{1,20}" required
-           title="Only letters allowed, max length is 20.">
+        <h3>Required Qualifications and Skills</h3>
+        <p><strong>Essential:</strong></p>
+        <ul>
+          <li>Experience with server maintenance and troubleshooting</li>
+          <li>Proficiency with Windows Server, Linux, and virtualization</li>
+          <li>2+ years of experience in a similar role</li>
+        </ul>
+        <p><strong>Preferable:</strong></p>
+        <ul>
+          <li>Experience with cloud computing platforms</li>
+          <li>Knowledge of network configurations and security</li>
+        </ul>
+      </section>
+    </main>
 
-    <!-- Date of Birth -->
-    <label for="dob">Date of Birth (dd/mm/yyyy):</label>
-    <input type="date" id="dob" name="dob" required>
+    <!-- Aside with Job Application Link -->
+    <aside>
+      <h3>Interested in applying?</h3>
+      <p>For more details or to apply for a job, visit our <a href="apply.html">Application Page</a>.</p>
+    </aside>
 
-    <!-- Gender -->
-    <fieldset>
-        <legend>Gender:</legend>
-        <label for="male">
-            <input type="radio" id="male" name="gender" value="Male" required> Male
-        </label>
-        <label for="female">
-            <input type="radio" id="female" name="gender" value="Female"> Female
-        </label>
-        <label for="other">
-            <input type="radio" id="other" name="gender" value="Other"> Other
-        </label>
-    </fieldset>
-
-    <!-- Street Address -->
-    <label for="address">Street Address:</label>
-    <input type="text" id="address" name="address" maxlength="40" required>
-
-    <!-- Suburb/Town -->
-    <label for="suburb">Suburb/Town:</label>s
-    <input type="text" id="suburb" name="suburb" maxlength="40" required>
-
-    <!-- State -->
-    <label for="state">State:</label>
-    <select id="state" name="state" required>
-        <option value="" disabled selected>Select your state</option>
-        <option value="VIC">VIC</option>
-        <option value="NSW">NSW</option>
-        <option value="QLD">QLD</option>
-        <option value="NT">NT</option>
-        <option value="WA">WA</option>
-        <option value="SA">SA</option>
-        <option value="TAS">TAS</option>
-        <option value="ACT">ACT</option>
-    </select>
-
-    <!-- Postcode -->
-    <label for="postcode">Postcode:</label>
-    <input type="text" id="postcode" name="postcode" pattern="\d{4}" required
-           title="Postcode must be exactly 4 digits.">
-
-    <!-- Email Address -->
-    <label for="email">Email Address:</label>
-    <input type="email" id="email" name="email" required
-           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address.">
-
-    <!-- Phone Number -->
-    <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone" pattern="\d{8,12}" required
-           title="Phone number must be between 8 to 12 digits.">
-
-    <!-- Technical Skills -->
-    <label>Technical Skills:</label>
-    <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
-    <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
-    <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
-    <label><input type="checkbox" name="skills" value="Python"> Python</label>
-
-    <!-- Other Skills -->
-    <label for="other-skills">Other Skills:</label>
-    <textarea id="other-skills" name="other_skills" rows="4" cols="50"></textarea>
-
-    <!-- Submit Button -->
-    <button type="submit">Apply</button>
-</form>
-
-</body>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Intelligenz Analytics | All Rights Reserved</p>
+    </footer>
+  </body>
 </html>
