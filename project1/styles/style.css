@@ -19,7 +19,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     font-style: normal;
     color: black;
-    background-image: url("/images/index-background.jpg"); /* Image courtesy of 'Burak The Weekender' on pexels! */
+    background-image: url("images/index-background.jpg"); /* Image courtesy of 'Burak The Weekender' on pexels! */
     background-repeat: no-repeat;
     background-size: cover;
 }
