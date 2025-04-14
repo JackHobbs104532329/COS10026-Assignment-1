@@ -25,7 +25,7 @@
 
     <!--Form-->
     <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
-      <fieldset>
+      <fieldset class="personalinformation">
         <legend>Personal information</legend>
         <p><label for="firstname">First Name</label>
           <input type="text" name="firstname" id="firstname" pattern="[A-za-z]{1,20}" required>
@@ -39,7 +39,7 @@
           <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="\d{1,2}\/\d{1,2}\/\d{4}" required>
         </p>
 
-        <legend>Gender</legend>
+        <h6>Gender</h6>
         <p><label for="male">Male</label>
           <input type="radio" id="male" name="gender" value="male" required>
         <label for="female">Female</label>
@@ -51,7 +51,7 @@
         </p>
       </fieldset>
 
-      <fieldset>
+      <fieldset class="contactinformation">
         <legend>Contact information</legend>
         <p><label for="address">Street Address</label>
           <input type="text" id="address" name="address" pattern="{40}" required> <!--Check pattern-->
@@ -87,7 +87,7 @@
         </p>
       </fieldset>
 
-      <fieldset>
+      <fieldset class="jobinformation">
         <legend>Job information</legend>
         <p><label for="jobnumber">Job reference number</label> <!--JOB REFERENCE NUMBERS WILL BE 5 ALPHANUMERIC CHARACTERS-->
           <select name="jobnumber" id="jobnumber" required>
