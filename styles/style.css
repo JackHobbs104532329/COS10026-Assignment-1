@@ -72,7 +72,7 @@ fieldset legend {
     float: left;
 }
 
-th, table caption, dl dt {
+th, table caption {
     margin: 0.1% 0.1% 0.1% 0.1%;
     border: 2px solid rgba(127,127,127);
     background-color: rgba(127,127,127);
@@ -81,7 +81,7 @@ th, table caption, dl dt {
     box-shadow: 0px 2px 4px gray;
 }
 
-td {
+td, dl dt {
     background: linear-gradient(to top,rgba(34,139,34,0.4) , rgb(50,205,50,0.4));
     border-radius: 4px;
     box-shadow: 0px 2px 4px gray;
